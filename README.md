@@ -5,7 +5,7 @@ This repository contains a data structure that supports range queries over a 3 d
 Given a set S of points in 3 dimensional space and the description of a rectangular prism in 3 dimensions space (a range of x, y, and z values), return the number of points of S that lie inside or on the boundary of the query prisum.
 
 ## Approach 
-In order to effeciently solve this problem a hybrid data structure was created. This data strcutre was KD-tree (https://www.cs.umd.edu/class/spring2021/cmsc420-0101/Lects/lect13-kd-query.pdf) merged with an assoicated range tree (https://www.cs.umd.edu/class/spring2021/cmsc420-0101/Lects/lect16-range-tree.pdf).
+In order to effeciently solve this problem a hybrid data structure was created. This data strcutre was KD-tree (https://www.cs.umd.edu/class/spring2021/cmsc420-0101/Lects/lect13-kd-query.pdf) merged with an assoicated range tree (https://www.cs.umd.edu/class/spring2021/cmsc420-0101/Lects/lect16-range-tree.pdf). Additionaly The Range-tree assocaited with each node of the KD-tree is an array. These arrays will shrink as less nodes become avaible for the given section of the tree. Using a systems of pointers when the query reaches the final nodes of the main strucutre there will already be pointers to the number of Z-nodes in the range which removes any final query that would increase the time complexity from O(sqrt(n)) to O(sqrt(n)log(n))
 
 ## What is a KD Tree 
 A KD tree is a binary tree in which every node is a k-dimensional point. Each non-leaf node generates a splitting hyperplane that divides the space into two half-spaces. Points to the left of this hyperplane are represented by the left subtree of that node, and points to the right of the hyperplane are represented by the right subtree.
@@ -27,3 +27,4 @@ Exmple.in<br>
 the following file gives two points to add to the data structure (0,1,2) and (2,2,3) then a query of x (0-1), y(0-1), and z(0-2) is made and there is 1 point from this dataset that is in that query so the value of 1 is returned on Example.out
 
 ## Running
+Run the RangeSearchTest class as a junit test. Creating your own input files and replacing them in the Junit test also works for any further validation.
