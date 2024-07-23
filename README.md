@@ -18,3 +18,12 @@ Public RangeSearch(int[][] points) is the constructor of the the class RangeSear
 Public int query(int xMin, int xMax, int yMin, int yMax, int zMin, int zMax): given the description of the rectangular prism, this method returns the number of points that lie inside or on the boundary of the query range. More preciely, this method returns the number of input points p=(x,y,z) such that xMin <= x <= xMax, yMin <= y <= yMax, and zMin <= z <= zMax
 
 ## Testing
+There are a few testing files which set the points and then run the querys. Each input file starts with the points which are represented by 3 numbers x, y, and z. Then the first line with 6 numbers represents a query. The returned value in the .out file represents the number of points inside of the query range. <br><br>
+Example:<br><br>
+Exmple.in<br>
+0     1      2<br>
+2     2      3<br>
+0     1      0     1     0    2<br>
+the following file gives two points to add to the data structure (0,1,2) and (2,2,3) then a query of x (0-1), y(0-1), and z(0-2) is made and there is 1 point from this dataset that is in that query so the value of 1 is returned on Example.out
+
+## Running
