@@ -1,5 +1,5 @@
 # Fractional
-This repository contains a data structure that supports range queries over a 3 dimensional point set.
+(Note: All code is in the master branch not the main branch). This repository contains a data structure that supports range queries over a 3 dimensional point set. 
 
 ## Problem
 Given a set S of points in 3 dimensional space and the description of a rectangular prism in 3 dimensions space (a range of x, y, and z values), return the number of points of S that lie inside or on the boundary of the query prisum.
